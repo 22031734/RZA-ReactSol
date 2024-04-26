@@ -16,3 +16,18 @@ function hideBooking() {
     }
 );    
 };
+
+function saveinputs() {
+    let CheckIn = document.getElementById("checkin").value
+    
+    let CheckOut = document.getElementById("checkout").value
+
+    let Adult = document.getElementById("Adult").value
+
+    let Child = document.getElementById("Child").value
+
+    sessionStorage.setItem("Adult", Adult)
+    sessionStorage.setItem("Child", Child)
+    sessionStorage.setItem("CheckIn", CheckIn)
+    sessionStorage.setItem("CheckOut", CheckOut)
+}

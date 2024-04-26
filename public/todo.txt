@@ -1,8 +1,8 @@
 Revert website and take progress screenshots
 use progress screenshots to fill out devlog
-fill out asset table
+///fill out asset table
 
-Finish the slideshow content
+///Finish the slideshow content
 populate popup div
 
 populate bottom of dashboard
@@ -13,8 +13,8 @@ create booking page
 ensure user details are entered into booking page automatically when getting there from the booking bar
 create loyalty store
 
-connect graphQL API
-construct database
+///connect graphQL API
+///construct database
 create login
 create booking system
 store user settings and bookings

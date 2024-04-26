@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="bookingstyle.css"
+    <script src="booking.js"></script>
+    <title>Booking</title>
+    <link rel="icon" type="image/x-icon" href="T2 Assets/Symbols/LogoCombo.svg">
+</head>
+
+<body>
+    <form style="height: 100%; display: inline-block;">
+        <label for="checkin">Checkin Date:</label><br>
+        <input type="date" id="checkin" name="checkin"><br>
+        <label for="checkout">Checkout Date:</label><br>
+        <input type="date" id="checkout" name="checkout"><br>
+        <label for="Adult">Number of Adults:</label>
+        <input type="number" id="Adult" name="Adult">
+        <label for="Child">Number of Children:</label>
+        <input type="number" id="Child" name="Child">
+        <input onclick="StoreInput()" type="submit">Submit
+    </form>
+</body>

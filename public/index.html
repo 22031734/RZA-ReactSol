@@ -57,7 +57,7 @@
 
         <div class="checkin-align align">
             <div class="label l-checkin" id="hide">Check-In</div>
-            <input type="date" name="Checkin" class="dateSelect checkin">
+            <input type="date" if="checkin" name="Checkin" class="dateSelect checkin">
         </div>
 
         <div class="separator one"></div>
@@ -72,13 +72,13 @@
         <div class="people-align align">
             <div class="label peopleno">Number of People</div>
             <div class="person-label adults">Adult(s) : </div>
-            <input type="number" id="people" name="people" min="0" max="5" class="people-input adult">
+            <input type="number" id="adult" name="adult" min="0" max="5" class="people-input adult">
             <div class="person-label children">Children : </div>
-            <input type="number" id="people" name="people" min="0" max="5" class="people-input child">
+            <input type="number" id="child" name="child" min="0" max="5" class="people-input child">
         </div>
 
         <div class="booksubmit-align">
-            <button class="booking-submit">Book Now</button>
+            <a href="booking.html"><button onclick="saveinputs()" class="booking-submit">Book Now</button></a>
         </div>
 
         <div class="hide" id="show" hidden>test</div>
