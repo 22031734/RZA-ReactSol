@@ -1,4 +1,43 @@
-type Note @model @auth(rules: [ { allow: public } ] ){
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Username: String!
+  Bookings: [HotelBookings] @hasMany(indexName: "byUsers", fields: ["id"])
+  Password: String!
+  Email: String!
+  Loyalty: Int!
+}
+
+type Activity @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  zoobookingsID: ID! @index(name: "byZooBookings")
+  Name: String!
+  Capacity: Int!
+}
+
+type HotelBookings @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  usersID: ID! @index(name: "byUsers")
+  roomsID: ID! @index(name: "byRooms")
+  CheckinDate: AWSDate!
+  CheckoutDate: AWSDate!
+  numberOfGuests: Int!
+}
+
+type Rooms @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roomNumber: Int!
+  capacity: Int!
+  Bookings: [HotelBookings] @hasMany(indexName: "byRooms", fields: ["id"])
+  available: Boolean!
+}
+
+type ZooBookings @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  VisitDate: AWSDate!
+  Activities: [Activity] @hasMany(indexName: "byZooBookings", fields: ["id"])
+}
+
+type Note @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String!
   description: String

@@ -1,0 +1,30 @@
+Revert website and take progress screenshots
+use progress screenshots to fill out devlog
+fill out asset table
+
+Finish the slideshow content
+populate popup div
+
+populate bottom of dashboard
+create professional footer
+create popup
+create user settings / bookings management page
+create booking page
+ensure user details are entered into booking page automatically when getting there from the booking bar
+create loyalty store
+
+connect graphQL API
+construct database
+create login
+create booking system
+store user settings and bookings
+ensure bookings come with a tracking number
+save user loyalty points
+
+integrate botpress chatbot and share the code used to connect to the API, but say you reviewed it and decided to remove it
+
+test
+construct test log
+take screenshots of code
+
+comment and clean code

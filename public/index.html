@@ -1,43 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <link rel="stylesheet" href="style.css">
+    <script src="animation.js"></script>
+    <title>Ridget-Zoo Adventures</title>
+    <link rel="icon" type="image/x-icon" href="T2 Assets/Symbols/LogoCombo.svg">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="titlebar">
+        <div class="title-align">
+
+            <button class="accountHover">
+                <img src="T2 Assets/Symbols/AccountButton.svg" class="account">
+                <div class="user name">Username</div>
+                <div class="user points">Points</div>
+            </button>
+                
+            <a href="index.html">
+                <img src="T2 Assets/Symbols/LogoYellow.svg" class = "logo">
+            </a>
+            
+
+            <div class="socials-align">
+                <a class="socials instagram" href="https://www.instagram.com">
+                    <img src="T2 Assets/Symbols/Instagram.svg">
+                </a>
+    
+                <a class="socials youtube" href="https://www.youtube.com">
+                    <img src="T2 Assets/Symbols/Youtube.svg">
+                </a>
+    
+                <a class="socials facebook" href="https://www.facebook.com">
+                    <img src="T2 Assets/Symbols/Facebook.svg">
+                </a>
+    
+                <a class="socials whatsapp" href="https://www.x.com">
+                    <img src="T2 Assets/Symbols/X logo.svg">
+                </a>
+            </div>
+            
+        </div>        
+    </div>
+
+    <div class="bookingbar">
+        <button onclick="hideBooking()" class="bookingtoggle">
+            <img src="T2 Assets/Symbols/ZooMarker.svg" class="Marker">
+        </button>
+
+        <div class="checkin-align align">
+            <div class="label l-checkin" id="hide">Check-In</div>
+            <input type="date" name="Checkin" class="dateSelect checkin">
+        </div>
+
+        <div class="separator one"></div>
+
+        <div class="checkout-align align">
+            <div class="label l-checkout">Check-Out</div>
+            <input type="date" id="checkout" name="Checkout" class="dateSelect checkout">
+        </div>
+
+        <div class ="separator two"></div>
+
+        <div class="people-align align">
+            <div class="label peopleno">Number of People</div>
+            <div class="person-label adults">Adult(s) : </div>
+            <input type="number" id="people" name="people" min="0" max="5" class="people-input adult">
+            <div class="person-label children">Children : </div>
+            <input type="number" id="people" name="people" min="0" max="5" class="people-input child">
+        </div>
+
+        <div class="booksubmit-align">
+            <button class="booking-submit">Book Now</button>
+        </div>
+
+        <div class="hide" id="show" hidden>test</div>
+    </div>
+
+<div class="dashAlign">
+    <div class="container slideshow">
+
+        <div class="mySlides fade sizing" style="background-color: grey";>
+
+            <div class="zooadver">
+                Visit Ridget Zoo Adventures
+            </div>
+
+            <div class="zooadver blurb">
+                Our acclaimed wildlife sanctuary is sure to give a memorable day out at all ages 
+            </div>
+
+            <video autoplay muted loop id="myVideo" class="videostyle">
+                <source src="T2 Assets/background_video.mp4" type="video/mp4" class="videostyle">
+            </video>
+
+        </div>
+    
+        <div class="mySlides fade sizing" style="background-color: white">
+
+            <div class="zooadver hotel">
+                Visit the Ridget Hotel
+            </div>
+
+            <div class="zooadver blurb hotel">
+                Our resort also provides 5 star accomodation to supplement a perfect day out at the zoo.
+            </div>
+
+            <video autoplay muted loop id="myVideo" class="videostyle">
+                <source src="T2 Assets/background_video_2.mp4" type="video/mp4" class="videostyle">
+            </video>
+
+        </div>
+    
+        <div class="mySlides fade sizing">
+
+            <div class="memberalign">
+                <div class="member core large">
+                    Core Membership
+                </div>
+    
+                <div class="member premium large">
+                    Premium Membership
+                </div>
+            </div>
+
+            
+
+            <video autoplay muted loop id="myVideo" class="videostyle memberposition">
+                <source src="T2 Assets/background_video_3.mp4" type="video/mp4" class="videostyle">
+            </video>
+
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">
+        <img src="T2 Assets/Symbols/Green +.svg" class="prevArrow">
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+        <img src="T2 Assets/Symbols/Green +.svg" class="nextArrow">
+        </a>
+    </div>
+
+    <div class="popups">
+        <nav>don't take our word for it!</nav>
+        <nav>\\\</nav>
+        <nav>reviews</nav>
+    </div>
+
+    <div class="footer"></div>
+</div>
+
+<script>
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
 </html>
