@@ -42,8 +42,6 @@ type Visit {
   numberOfVisitors: Int!
 }
 
-scalar Date
-
 type Query {
   getUser(id: ID!): User
   getAllRooms: [Room!]!
