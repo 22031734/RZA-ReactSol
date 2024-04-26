@@ -25,6 +25,7 @@ integrate botpress chatbot and share the code used to connect to the API, but sa
 
 test
 construct test log
+comment and clean code
 take screenshots of code
 
-comment and clean code
+
