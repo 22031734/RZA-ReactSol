@@ -4,3 +4,54 @@ type Note @model @auth(rules: [ { allow: public } ] ){
   description: String
   image: String
 }
+
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  bookings: [Booking!]!
+}
+
+type Room {
+  id: ID!
+  number: Int!
+  capacity: Int!
+  bookings: [Booking!]!
+}
+
+type Booking {
+  id: ID!
+  user: User!
+  room: Room!
+  checkInDate: Date!
+  checkOutDate: Date!
+  numberOfGuests: Int!
+}
+
+type Activity {
+  id: ID!
+  name: String!
+  capacity: Int!
+  visits: [Visit!]!
+}
+
+type Visit {
+  id: ID!
+  activity: Activity!
+  visitDate: Date!
+  numberOfVisitors: Int!
+}
+
+scalar Date
+
+type Query {
+  getUser(id: ID!): User
+  getAllRooms: [Room!]!
+  getAllBookings: [Booking!]!
+  getAllActivities: [Activity!]!
+}
+
+type Mutation {
+  bookRoom(userId: ID!, roomId: ID!, checkInDate: Date!, checkOutDate: Date!, numberOfGuests: Int!): Booking!
+  bookVisit(activityId: ID!, visitDate: Date!, numberOfVisitors: Int!): Visit!
+}
